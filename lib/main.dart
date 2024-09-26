@@ -3,7 +3,6 @@ import 'package:crispy_booking/reset_password/forgot_password.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'reset_password/reset_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(),
         useMaterial3: true,
       ),
-      home: ForgotPassword(),
+      home: const ForgotPassword(),
     );
   }
 }
