@@ -17,8 +17,7 @@ class OtpVerification extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: SafeArea(
           child: Padding(
-        padding:
-            EdgeInsets.only(left: 0.07* screenWidth, right: 0.1 * screenWidth),
+        padding: EdgeInsets.symmetric(horizontal: 0.06 * screenWidth),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -26,32 +25,29 @@ class OtpVerification extends StatelessWidget {
               width: double.infinity,
               height: 0.05 * screenHeight,
             ),
-
-            
             InkWell(
-              onTap: () =>   Navigator.pop(context),
+              onTap: () => Navigator.pop(context),
               child: Container(
                 width: 0.12 * screenWidth,
-                height: 0.05 *screenHeight,
+                height: 0.05 * screenHeight,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: const Color(0xFFECECED),width: 2),
+                  border: Border.all(color: const Color(0xFFECECED), width: 2),
                 ),
                 child: Center(
                   child: SvgPicture.asset(
                     Assets.iconBackArrow,
-                    width: 0.05 *screenWidth,  // Size you want for the SVG icon
-                    height: 0.02 * screenHeight, // Size you want for the SVG icon
-                    fit: BoxFit.contain,  // Ensure the image stays within bounds
+                    width: 0.05 * screenWidth, // Size you want for the SVG icon
+                    height:
+                        0.02 * screenHeight, // Size you want for the SVG icon
+                    fit: BoxFit.contain, // Ensure the image stays within bounds
                   ),
                 ),
               ),
-            )
-
-             ,
+            ),
             SizedBox(
               width: double.infinity,
-              height: 0.05* screenHeight,
+              height: 0.05 * screenHeight,
             ),
             const Text(
               'OTP Verification',
@@ -61,19 +57,22 @@ class OtpVerification extends StatelessWidget {
               height: 0.01 * screenHeight,
             ),
             const Text(
-                'Enter the Verification code we just sent on your phone number.',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400,color: Color(0xFF4B5768)),),
+              'Enter the Verification code we just sent on your phone number.',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF4B5768)),
+            ),
             SizedBox(
               height: 0.07 * screenHeight,
             ),
             OtpTextField(
-
               borderRadius: BorderRadius.circular(10),
               fieldWidth: 0.160 * screenWidth,
               keyboardType: TextInputType.phone,
               numberOfFields: 4,
               borderColor: const Color(0xFFD0D5DD),
-              margin: EdgeInsets.only(left: screenWidth*0.045),
+              margin: EdgeInsets.symmetric(horizontal: screenWidth * 0.03),
 
               //set to true to show as box or false to show as dash
               showFieldAsBox: true,
@@ -81,16 +80,18 @@ class OtpVerification extends StatelessWidget {
               onCodeChanged: (String code) {
                 //handle validation or checks here
               },
-            )
-            ,
+            ),
             SizedBox(
               height: 0.09 * screenHeight,
             ),
             InkWell(
-              onTap: () { Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ResetPassword()),
-              );},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ResetPassword()),
+                );
+              },
               child: Container(
                 decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
@@ -109,13 +110,22 @@ class OtpVerification extends StatelessWidget {
             SizedBox(
               height: 0.06 * screenHeight,
             ),
-            const Center(child: Text('Resend OTP in 23s',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),)),
+            const Center(
+                child: Text(
+              'Resend OTP in 23s',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+            )),
             SizedBox(
               height: 0.01 * screenHeight,
             ),
-            const Center(child: Text('Resend OTP',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400,color: Color(0xFF999DA3)),)),
+            const Center(
+                child: Text(
+              'Resend OTP',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF999DA3)),
+            )),
           ],
         ),
       )),

@@ -15,8 +15,7 @@ class ForgotPassword extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: SafeArea(
           child: Padding(
-        padding:
-            EdgeInsets.only(left: 0.1 * screenWidth, right: 0.1 * screenWidth),
+        padding: EdgeInsets.symmetric(horizontal: 0.06 * screenWidth),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,29 +30,40 @@ class ForgotPassword extends StatelessWidget {
             SizedBox(
               height: 0.01 * screenHeight,
             ),
-            const Text('Enter your phone number to get the OTP',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400,color: Color(0xFF4B5768)),),
+            const Text(
+              'Enter your phone number to get the OTP',
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF4B5768)),
+            ),
             SizedBox(
               height: 0.07 * screenHeight,
             ),
-            const Text('Phone number',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400,color: Color(0xFF4B5768)),),
+            const Text(
+              'Phone number',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Color(0xFF4B5768)),
+            ),
             SizedBox(
               height: 0.01 * screenHeight,
             ),
             const TextField(
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
-                hintStyle: TextStyle(color: Color(0xFF999DA3),fontWeight: FontWeight.w100),
+                hintStyle: TextStyle(
+                    color: Color(0xFF999DA3), fontWeight: FontWeight.w100),
                 enabledBorder: OutlineInputBorder(
-
                     borderRadius: BorderRadius.all(Radius.circular(15)),
-                    borderSide: BorderSide(width: 1.5,color: Color(0xffD0D5DD))),
-                  border: OutlineInputBorder(
-
-                      borderRadius: BorderRadius.all(Radius.circular(15)),
-                      borderSide: BorderSide(width: 0.2)),
-                  hintText: "Phone number",),
+                    borderSide:
+                        BorderSide(width: 1.5, color: Color(0xffD0D5DD))),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    borderSide: BorderSide(width: 0.2)),
+                hintText: "Phone number",
+              ),
             ),
             SizedBox(
               height: 0.07 * screenHeight,
@@ -62,7 +72,8 @@ class ForgotPassword extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const OtpVerification()),
+                  MaterialPageRoute(
+                      builder: (context) => const OtpVerification()),
                 );
               },
               child: Container(
@@ -80,7 +91,6 @@ class ForgotPassword extends StatelessWidget {
                 ),
               ),
             ),
-              
           ],
         ),
       )),
