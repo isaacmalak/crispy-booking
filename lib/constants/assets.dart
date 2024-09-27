@@ -34,4 +34,7 @@ class Assets {
   static const iconToilet = 'assets/icons/toilet.svg';
   static const imagesMan = 'assets/images/man.jpg';
   static const imagesShip = 'assets/images/ship.jpg';
+  static const google = 'assets/images/google.svg';
+  static const appleLogo = 'assets/images/apple-logo.svg';
+  
 }
