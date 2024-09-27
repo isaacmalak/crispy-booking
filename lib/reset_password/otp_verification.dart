@@ -36,7 +36,7 @@ class OtpVerification extends StatelessWidget {
                 ),
                 child: Center(
                   child: SvgPicture.asset(
-                    Assets.iconBackArrow,
+                    "assets/icon/backArrow.svg",
                     width: 0.05 * screenWidth, // Size you want for the SVG icon
                     height:
                         0.02 * screenHeight, // Size you want for the SVG icon
