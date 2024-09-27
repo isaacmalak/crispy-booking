@@ -2,9 +2,9 @@ import 'package:crispy_booking/constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../widgets/back_arrow.dart';
-import '../../widgets/heart_icon.dart';
-import '../../widgets/share_icon.dart';
+import '../../components/back_arrow.dart';
+import '../../components/heart_icon.dart';
+import '../../components/share_icon.dart';
 
 class ShipDetails extends StatelessWidget {
   const ShipDetails({super.key});

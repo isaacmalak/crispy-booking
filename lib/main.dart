@@ -1,5 +1,6 @@
 
 import 'package:crispy_booking/homeSceen/view/homeSceen.dart';
+import 'package:crispy_booking/searchScreen/View/searchScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         textTheme: const TextTheme(),
         useMaterial3: true,
       ),
-      home: const Homesceen(),
+      home: const SearchScreen  (),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:crispy_booking/components/searchbar.dart';
 import 'package:crispy_booking/constants/assets.dart';
 import 'package:crispy_booking/homeSceen/widgets/homeScreenWidgets.dart';
 import 'package:flutter/material.dart';
@@ -53,46 +54,9 @@ class Homesceen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: h * 0.01),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Container(
-                  height: h * 0.06,
-                  decoration: BoxDecoration(
-                    // color: const Color(0xffECECED),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                      color: const Color(0xffECECED),
-                      width: 2.0,
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SvgPicture.asset(
-                          Assets.searchIcon,
-                          width: 24,
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      const Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Search',
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SvgPicture.asset(
-                          Assets.slider,
-                          width: 30,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                child: Searchbar(),
               ),
               SizedBox(height: h * 0.015),
               const Padding(
