@@ -13,6 +13,13 @@ class OtpVerification extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     // ignore: unused_local_variable
     final screenHeight = MediaQuery.of(context).size.height;
+    // return SvgPicture.asset(
+    //   colorFilter: ColorFilter.mode(Colors.blue, BlendMode.color),
+    //   "assets/backArrow.svg",
+    //   //width: 0.05 * screenWidth, // Size you want for the SVG icon
+    //   height: 0.02 * screenHeight, // Size you want for the SVG icon
+    //   //fit: BoxFit.contain, // Ensure the image stays within bounds
+    // );
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SafeArea(
@@ -34,15 +41,8 @@ class OtpVerification extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: const Color(0xFFECECED), width: 2),
                 ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    "assets/icon/backArrow.svg",
-                    width: 0.05 * screenWidth, // Size you want for the SVG icon
-                    height:
-                        0.02 * screenHeight, // Size you want for the SVG icon
-                    fit: BoxFit.contain, // Ensure the image stays within bounds
-                  ),
-                ),
+                child: const Center(
+                    child: Icon(Icons.arrow_back_ios_new, size: 17)),
               ),
             ),
             SizedBox(
