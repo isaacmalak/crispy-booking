@@ -1,16 +1,32 @@
 import 'package:flutter/material.dart';
 
-class MyTextField extends StatelessWidget {
-  const MyTextField(
-      {super.key, required this.hintText, this.icon, required this.controller, required this.validator});
+class MyTextField extends StatefulWidget {
+  MyTextField({
+    super.key,
+    required this.hintText,
+    required this.controller,
+    required this.validator,
+    required this.screenHeight,
+    this.icon,
+    this.isHide,
+  });
   final String hintText;
   final Icon? icon;
   final TextEditingController? controller;
-  final Function(String)? validator ;
+  final Function(String)? validator;
+  bool? isHide;
+  final double screenHeight;
+  @override
+  State<MyTextField> createState() => _MyTextFieldState();
+}
+
+class _MyTextFieldState extends State<MyTextField> {
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(
+            vertical: widget.screenHeight * .01, horizontal: 10.0),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.red),
           borderRadius: BorderRadius.circular(15),
@@ -33,14 +49,24 @@ class MyTextField extends StatelessWidget {
         ),
         focusColor: Colors.black.withOpacity(.5),
         fillColor: Theme.of(context).colorScheme.surface,
-        hintText: hintText,
+        hintText: widget.hintText,
         hintStyle: Theme.of(context)
             .textTheme
             .bodyLarge!
             .copyWith(color: Colors.black.withOpacity(.3)),
-        suffixIcon: icon,
+        suffixIcon: widget.isHide != null
+            ? IconButton(
+                onPressed: () {
+                  widget.isHide = !widget.isHide!;
+                  setState(() {});
+                },
+                icon: Icon(widget.isHide!
+                    ? Icons.visibility_off_outlined
+                    : Icons.visibility_outlined))
+            : null,
       ),
-      controller: controller,
+      controller: widget.controller,
+      obscureText: widget.isHide ?? false,
     );
   }
 }
