@@ -136,6 +136,18 @@ class RegisterScreen extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
                               ),
+                            ).copyWith(
+                              overlayColor:
+                                  WidgetStateProperty.resolveWith<Color?>(
+                                (Set<WidgetState> states) {
+                                  if (states.contains(WidgetState.pressed)) {
+                                    return const Color.fromARGB(
+                                            255, 120, 120, 120)
+                                        .withOpacity(.1); //<-- SEE HERE
+                                  }
+                                  return null; // Defer to the widget's default.
+                                },
+                              ),
                             ),
                             label: const Text('Google',
                                 style: TextStyle(

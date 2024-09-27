@@ -38,7 +38,6 @@ dependencies:
   queen_validators: ^1.0.1
   flutter_svg: ^2.0.10+1
   flutter_otp_text_field: ^1.1.0+2
-  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -91,7 +90,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  assets:
-    - assets/icon/
-    - assets/images/
-
+  #  assets:
+  #  - assets/icon/
+  #  - assets/images/
