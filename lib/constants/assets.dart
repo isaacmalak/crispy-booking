@@ -24,6 +24,8 @@ static const layers='assets/icons/layers.svg';
 static const carForSale='assets/images/carForSalePic.png';
 
 static const speedTest='assets/icons/speedTest.png';
+static const  iconBackArrow = 'assets/icons/backArrow.svg';
+  static const  iconManIcon = 'assets/icons/man_icon.svg';
 
 
 
