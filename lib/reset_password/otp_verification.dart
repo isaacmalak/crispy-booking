@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_svg/svg.dart';
 
-
 class OtpVerification extends StatelessWidget {
   const OtpVerification({super.key});
 
@@ -36,7 +35,7 @@ class OtpVerification extends StatelessWidget {
                 ),
                 child: Center(
                   child: SvgPicture.asset(
-                    AssetsData.iconBackArrow,
+                    Assets.iconBackArrow,
                     width: 0.05 * screenWidth, // Size you want for the SVG icon
                     height:
                         0.02 * screenHeight, // Size you want for the SVG icon

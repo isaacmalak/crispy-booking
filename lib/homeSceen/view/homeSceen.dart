@@ -70,7 +70,7 @@ class Homesceen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: SvgPicture.asset(
-                          AssetsData.searchIcon,
+                          Assets.searchIcon,
                           width: 24,
                         ),
                       ),
@@ -86,7 +86,7 @@ class Homesceen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: SvgPicture.asset(
-                          AssetsData.slider,
+                          Assets.slider,
                           width: 30,
                         ),
                       ),
@@ -163,7 +163,7 @@ class Homesceen extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     image: const DecorationImage(
-                        image: AssetImage(AssetsData.containerBackground),
+                        image: AssetImage(Assets.containerBackground),
                         fit: BoxFit.cover,
                         opacity: 0.4),
                     color: const Color(0xFF243B7E),
@@ -218,14 +218,13 @@ class Homesceen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Image.asset(AssetsData.onlineShoppingLogo,
+                          Image.asset(Assets.onlineShoppingLogo,
                               width: w * 0.40),
                         ],
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 10.0),
-                        child: Image.asset(AssetsData.dotIndecator,
-                            width: w * 0.1),
+                        child: Image.asset(Assets.dotIndecator, width: w * 0.1),
                       ),
                     ],
                   ),
@@ -273,7 +272,7 @@ class Homesceen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Image.asset(
-                                  AssetsData.apartment1,
+                                  Assets.apartment1,
                                   width: double.infinity,
                                 ),
                                 const SizedBox(height: 10),
@@ -321,7 +320,7 @@ class Homesceen extends StatelessWidget {
                                           ),
                                           SizedBox(width: 5),
                                           SvgPicture.asset(
-                                            AssetsData.bed,
+                                            Assets.bed,
                                             width: 15,
                                           ),
                                           SizedBox(width: 15),
@@ -335,7 +334,7 @@ class Homesceen extends StatelessWidget {
                                           ),
                                           SizedBox(width: 5),
                                           SvgPicture.asset(
-                                            AssetsData.bath,
+                                            Assets.bath,
                                             width: 15,
                                           ),
                                           SizedBox(width: 15),
@@ -350,7 +349,7 @@ class Homesceen extends StatelessWidget {
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          SvgPicture.asset(AssetsData.layers,
+                                          SvgPicture.asset(Assets.layers,
                                               width: 15),
                                         ],
                                       ),
@@ -400,7 +399,7 @@ class Homesceen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Image.asset(
-                                  AssetsData.apartment2,
+                                  Assets.apartment2,
                                   width: double.infinity,
                                 ),
                                 const SizedBox(height: 10),
@@ -448,7 +447,7 @@ class Homesceen extends StatelessWidget {
                                           ),
                                           SizedBox(width: 5),
                                           SvgPicture.asset(
-                                            AssetsData.bed,
+                                            Assets.bed,
                                             width: 15,
                                           ),
                                           SizedBox(width: 15),
@@ -462,7 +461,7 @@ class Homesceen extends StatelessWidget {
                                           ),
                                           SizedBox(width: 5),
                                           SvgPicture.asset(
-                                            AssetsData.bath,
+                                            Assets.bath,
                                             width: 15,
                                           ),
                                           SizedBox(width: 15),
@@ -477,7 +476,7 @@ class Homesceen extends StatelessWidget {
                                           SizedBox(
                                             width: 5,
                                           ),
-                                          SvgPicture.asset(AssetsData.layers,
+                                          SvgPicture.asset(Assets.layers,
                                               width: 15),
                                         ],
                                       ),
@@ -536,7 +535,7 @@ class Homesceen extends StatelessWidget {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(AssetsData.carForSale,
+                                child: Image.asset(Assets.carForSale,
                                     width: w * 0.24),
                               ),
                               Padding(
@@ -557,7 +556,7 @@ class Homesceen extends StatelessWidget {
                                     ),
                                     Row(
                                       children: [
-                                        Image.asset(AssetsData.speedTest,
+                                        Image.asset(Assets.speedTest,
                                             width: 15),
                                         const SizedBox(width: 5),
                                         const Text(

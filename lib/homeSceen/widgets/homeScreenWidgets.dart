@@ -19,7 +19,7 @@ class notficitionBellIcon extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SvgPicture.asset(
-          AssetsData.homeScreenBell,
+          Assets.homeScreenBell,
           width: 24,
         ),
       ),
@@ -41,7 +41,7 @@ class profilePic extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       child: Image.asset(
-        AssetsData.homeScreenProfilePic,
+        Assets.homeScreenProfilePic,
         width: 40,
       ),
     );
@@ -100,22 +100,22 @@ class bottomNavBar extends StatelessWidget {
 List categories = [
   {
     'name': 'Properties',
-    'icon': AssetsData.properties,
+    'icon': Assets.properties,
   },
   {
     'name': 'Cars',
-    'icon': AssetsData.carPic,
+    'icon': Assets.carPic,
   },
   {
     'name': 'Electric',
-    'icon': AssetsData.electricPic,
+    'icon': Assets.electricPic,
   },
   {
     'name': 'Events',
-    'icon': AssetsData.eventsPic,
+    'icon': Assets.eventsPic,
   },
   {
     'name': 'Yacht',
-    'icon': AssetsData.yachtPic,
+    'icon': Assets.yachtPic,
   },
 ];

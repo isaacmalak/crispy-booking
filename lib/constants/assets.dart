@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
 
-class AssetsData {
+class Assets {
   static const homeScreenBell = 'assets/icons/homeScreenBell.svg';
   static const homeScreenProfilePic = 'assets/images/homeScreenProfilePic.png';
   static const searchIcon = 'assets/icons/searchIcon.svg';
@@ -17,17 +16,22 @@ class AssetsData {
   static const apartment1 = 'assets/images/apartment1.png';
   static const apartment2 = 'assets/images/apartment2.png';
 
-static const bath='assets/icons/bath.svg';
-static const bed='assets/icons/bed.svg';
-static const layers='assets/icons/layers.svg';
+  static const bath = 'assets/icons/bath.svg';
+  static const bed = 'assets/icons/bed.svg';
+  static const layers = 'assets/icons/layers.svg';
 
-static const carForSale='assets/images/carForSalePic.png';
+  static const carForSale = 'assets/images/carForSalePic.png';
 
-static const speedTest='assets/icons/speedTest.png';
-static const  iconBackArrow = 'assets/icons/backArrow.svg';
-  static const  iconManIcon = 'assets/icons/man_icon.svg';
+  static const speedTest = 'assets/icons/speedTest.png';
+  static const iconBackArrow = 'assets/icons/backArrow.svg';
+  static const iconManIcon = 'assets/icons/man_icon.svg';
 
-
-
-
+  static const iconGrill = 'assets/icons/grill.svg';
+  static const iconHeartIcon = 'assets/icons/heartIcon.svg';
+  static const iconIceBox = 'assets/icons/iceBox.svg';
+  static const iconPerson = 'assets/icons/person.svg';
+  static const iconShareIcon = 'assets/icons/shareIcon.svg';
+  static const iconToilet = 'assets/icons/toilet.svg';
+  static const imagesMan = 'assets/images/man.jpg';
+  static const imagesShip = 'assets/images/ship.jpg';
 }
