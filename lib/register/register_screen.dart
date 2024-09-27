@@ -9,11 +9,13 @@ class RegisterScreen extends StatelessWidget {
       this.nameController,
       this.phoneController,
       this.emailController,
-      this.passwordController});
+      this.passwordController,
+      this.formKey});
   final TextEditingController? phoneController;
   final TextEditingController? nameController;
   final TextEditingController? emailController;
   final TextEditingController? passwordController;
+  final GlobalKey? formKey;
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -26,6 +28,7 @@ class RegisterScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(
                 vertical: screenHeight * .05, horizontal: screenWidth * .07),
             child: Form(
+              key: formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
