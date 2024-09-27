@@ -1,5 +1,6 @@
 import 'package:crispy_booking/constants/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class notficitionBellIcon extends StatelessWidget {
@@ -17,9 +18,9 @@ class notficitionBellIcon extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Image.asset(
+        child: SvgPicture.asset(
           AssetsData.homeScreenBell,
-          width: 16,
+          width: 24,
         ),
       ),
     );
@@ -41,35 +42,80 @@ class profilePic extends StatelessWidget {
       ),
       child: Image.asset(
         AssetsData.homeScreenProfilePic,
-        width: 32,
+        width: 40,
       ),
     );
   }
 }
 
-class searchTextField extends StatelessWidget {
-  const searchTextField({super.key});
+class bottomNavBar extends StatelessWidget {
+  const bottomNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-        decoration: const InputDecoration(
-            border: OutlineInputBorder(
-              borderSide: BorderSide(
-                width: 1,
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(10)),
-            ),
-            suffixIcon: Icon(
-              FontAwesomeIcons.sliders,
-              size: 18,
-              color: Color(0xff4F4B5C),
-            ),
-            prefixIcon: Icon(
-              FontAwesomeIcons.magnifyingGlass,
-              size: 23,
-            )));
+    return BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home_outlined,
+          ),
+          label: 'Home',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.ballot_outlined),
+          label: 'Orders',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(
+            Icons.settings_outlined,
+          ),
+          label: 'Setting',
+        ),
+      ],
+      currentIndex: 0,
+      showUnselectedLabels: true,
+      selectedFontSize: 16,
+      unselectedFontSize: 16,
+      unselectedItemColor: const Color(0xff9CA3AF),
+      unselectedLabelStyle: const TextStyle(
+        fontSize: 16,
+        color: Color(0xff9CA3AF),
+      ),
+      selectedLabelStyle: const TextStyle(
+        fontSize: 16,
+        color: Color(0xff1A2649),
+      ),
+      selectedItemColor: const Color(0xff1A2649),
+      onTap: (index) {
+        index == 1
+            ? null
+            : index == 2
+                ? null
+                : null;
+      },
+    );
   }
 }
 
-
+List categories = [
+  {
+    'name': 'Properties',
+    'icon': AssetsData.properties,
+  },
+  {
+    'name': 'Cars',
+    'icon': AssetsData.carPic,
+  },
+  {
+    'name': 'Electric',
+    'icon': AssetsData.electricPic,
+  },
+  {
+    'name': 'Events',
+    'icon': AssetsData.eventsPic,
+  },
+  {
+    'name': 'Yacht',
+    'icon': AssetsData.yachtPic,
+  },
+];
