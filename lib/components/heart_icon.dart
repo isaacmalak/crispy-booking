@@ -1,6 +1,8 @@
-import 'package:crispy_booking/constants/assets.dart';
+import '../constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+
 
 class HeartIconWidget extends StatelessWidget {
   const HeartIconWidget({super.key});
@@ -11,7 +13,7 @@ class HeartIconWidget extends StatelessWidget {
     final screenWidth = MediaQuery.of(context).size.width;
     // ignore: unused_local_variable
     final screenHeight = MediaQuery.of(context).size.height;
-    return InkWell(
+    return   InkWell(
       onTap: () => Navigator.pop(context),
       child: Container(
         width: 0.12 * screenWidth,
@@ -19,13 +21,14 @@ class HeartIconWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white, width: 2),
+          border: Border.all( color:  const Color(0xffECECED), width: 2),
         ),
         child: Center(
           child: SvgPicture.asset(
-            Assets.iconHeartIcon,
+            Assets.iconsHeartIcon,
             width: 0.05 * screenWidth, // Size you want for the SVG icon
-            height: 0.02 * screenHeight, // Size you want for the SVG icon
+            height:
+            0.02 * screenHeight, // Size you want for the SVG icon
             fit: BoxFit.contain, // Ensure the image stays within bounds
           ),
         ),

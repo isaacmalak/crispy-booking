@@ -20,6 +20,7 @@ class ChipchoiseWidget extends StatelessWidget {
         categories.length,
         (int index) {
           return ChoiceChip(
+            backgroundColor: const Color(0xFFFFFFFF), // Background color
             showCheckmark: false, // Removes the checkmark
             label: Text(categories[index]),
             selected:

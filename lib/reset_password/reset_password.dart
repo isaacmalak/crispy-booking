@@ -1,3 +1,4 @@
+import 'package:crispy_booking/homeSceen/view/homeSceen.dart';
 import 'package:flutter/material.dart';
 
 class ResetPassword extends StatefulWidget {
@@ -122,7 +123,11 @@ class _ResetPasswordState extends State<ResetPassword> {
               height: 0.1 * screenHeight,
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const Homesceen();
+                }));
+              },
               child: Container(
                 decoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,

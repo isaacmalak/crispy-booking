@@ -1,11 +1,17 @@
-import 'dart:ffi';
+import 'package:crispy_booking/reservation/payment_info.dart';
 
-import 'package:crispy_booking/detailsScreens/view/ship_details.dart';
-import 'package:crispy_booking/homeSceen/view/homeSceen.dart';
-import 'package:crispy_booking/login/login_screen.dart';
-import 'package:crispy_booking/register/register_screen.dart';
-import 'package:crispy_booking/reset_password/reset_password.dart';
-import 'package:crispy_booking/searchScreen/View/searchScreen.dart';
+import 'details/limousine_car_details.dart';
+import 'details/suv_car_details.dart';
+import 'eventsScreen/eventsScreen.dart';
+import 'homeSceen/view/homeSceen.dart';
+import 'login/login_screen.dart';
+import 'ordersScreen/ordersScreen.dart';
+import 'properties/propertiesScreen.dart';
+import 'register/register_screen.dart';
+import 'searchScreen/SearchScreen2.dart';
+import 'searchScreen/searchScreen.dart';
+import 'yachts-carsScreen/carsScreen.dart';
+import 'yachts-carsScreen/yachtsScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -25,10 +31,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFF1a2649),
         fontFamily: GoogleFonts.inter().fontFamily,
+        scaffoldBackgroundColor: Colors.white,
         textTheme: const TextTheme(),
         useMaterial3: true,
       ),
-      home: Homesceen(),
+      home: const LoginScreen (),
     );
   }
 }

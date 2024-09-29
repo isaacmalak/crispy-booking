@@ -1,5 +1,8 @@
 import 'package:crispy_booking/components/text_field.dart';
 import 'package:crispy_booking/constants/assets.dart';
+import 'package:crispy_booking/homeSceen/view/homeSceen.dart';
+import 'package:crispy_booking/login/login_screen.dart';
+import 'package:crispy_booking/reset_password/otp_verification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:queen_validators/queen_validators.dart';
@@ -103,7 +106,12 @@ class RegisterScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const OtpVerification()));
+                      },
                       child: Text(
                         "Create",
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
@@ -138,7 +146,7 @@ class RegisterScreen extends StatelessWidget {
                           child: ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
+                                borderRadius: BorderRadius.circular(10),
                               ),
                             ).copyWith(
                               overlayColor:
@@ -183,7 +191,7 @@ class RegisterScreen extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
+                                borderRadius: BorderRadius.circular(10),
                               ),
                             ).copyWith(
                               overlayColor:
@@ -222,7 +230,12 @@ class RegisterScreen extends StatelessWidget {
                       style: TextButton.styleFrom(
                         foregroundColor: const Color.fromARGB(255, 68, 77, 255),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()));
+                      },
                       child: const Text(
                         "Login here",
                       ),

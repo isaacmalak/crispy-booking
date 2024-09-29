@@ -1,9 +1,11 @@
-import 'package:crispy_booking/constants/assets.dart';
+import 'package:crispy_booking/properties/propertiesScreen.dart';
+
+import '../constants/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class Searchbar extends StatelessWidget {
-  const Searchbar({super.key});
+class CustomSearchBar extends StatelessWidget {
+  const CustomSearchBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +26,25 @@ class Searchbar extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: SvgPicture.asset(
               Assets.searchIcon,
-              width: 24,
+              width: 18,
             ),
           ),
-          const SizedBox(width: 10),
-          const Expanded(
+          //  const SizedBox(width: 10),
+          Expanded(
             child: TextField(
-              decoration: InputDecoration(
+              onEditingComplete: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PropertiesScreen()));
+              },
+              decoration: const InputDecoration(
                 border: InputBorder.none,
                 hintText: 'Search',
+                hintStyle: TextStyle(
+                  color: Color(0xff999DA3),
+                  fontSize: 14,
+                ),
               ),
             ),
           ),
@@ -40,8 +52,11 @@ class Searchbar extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: SvgPicture.asset(
               Assets.slider,
-              width: 30,
+              width: 20,
             ),
+          ),
+          const SizedBox(
+            width: 5,
           ),
         ],
       ),

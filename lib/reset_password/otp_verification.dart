@@ -1,5 +1,7 @@
-import 'package:crispy_booking/constants/assets.dart';
-import 'package:crispy_booking/reset_password/reset_password.dart';
+import 'package:crispy_booking/homeSceen/view/homeSceen.dart';
+
+import '../constants/assets.dart';
+import 'reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_svg/svg.dart';
@@ -35,7 +37,7 @@ class OtpVerification extends StatelessWidget {
                 ),
                 child: Center(
                   child: SvgPicture.asset(
-                    Assets.iconBackArrow,
+                    Assets.iconsBackArrow,
                     width: 0.05 * screenWidth, // Size you want for the SVG icon
                     height:
                         0.02 * screenHeight, // Size you want for the SVG icon
@@ -86,10 +88,9 @@ class OtpVerification extends StatelessWidget {
             InkWell(
               onTap: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ResetPassword()),
-                );
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResetPassword()));
               },
               child: Container(
                 decoration: BoxDecoration(
